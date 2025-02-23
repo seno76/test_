@@ -63,9 +63,9 @@ def user_compute_password(N, file_secret):
 # Удаление паролей из файла на сервере после его использования
 def remove_used_password(filename):
     passwords = read_passwords(filename)
-    updated_passwords = passwords[1:]
-    update_password_file(filename, updated_passwords)
-    return updated_passwords
+    passwd = passwords[1:]
+    update_password_file(filename, passwd)
+    return passwd
 
 # Вывод содержимого файла с паролями на экран
 def print_current_passwords(filename):
